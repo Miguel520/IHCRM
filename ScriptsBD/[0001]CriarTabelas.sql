@@ -17,7 +17,9 @@ CREATE TABLE cliente (
 
 CREATE TABLE contactoCliente (
     IDCliente INT(11)           NOT NULL,
-    Morada VARCHAR(50)          NOT NULL, 
+    Morada VARCHAR(50)          NOT NULL,
+    Cidade VARCHAR(50)          NOT NULL,
+    CodigoPostal VARCHAR(8)     NOT NULL,         
     Email VARCHAR(50)           NOT NULL,
     Telemovel INT(9)            NOT NULL,
     Telefone INT(9)             NOT NULL,
@@ -26,16 +28,18 @@ CREATE TABLE contactoCliente (
 );
 
 CREATE TABLE produto (
-    IDProduto INT(11)           NOT NULL AUTO_INCREMENT, 
+    IDProduto INT(11)           NOT NULL AUTO_INCREMENT,
+    NomeProduto VARCHAR(20)     NOT NULL,
     Quantidade INT(7)           NOT NULL, 
     Cor VARCHAR(20)             NOT NULL, 
     Preco FLOAT(7,2)            NOT NULL,
+    Descricao VARCHAR(100)      NOT NULL,
     PRIMARY KEY (IDProduto)
 );
 
 CREATE TABLE vendedor (
     IDVendedor INT(11)          NOT NULL AUTO_INCREMENT,
-    password VARCHAR(60)		NOT NULL,
+    Password VARCHAR(60)		NOT NULL,
     PrNome VARCHAR(14)          NOT NULL, 
     UltNome VARCHAR(20)         NOT NULL,
     DataCont DATE               NOT NULL, 
@@ -46,7 +50,9 @@ CREATE TABLE vendedor (
 
 CREATE TABLE contactoVendedor (
     IDVendedor INT(11)          NOT NULL, 
-    Morada VARCHAR(100)         NOT NULL, 
+    Morada VARCHAR(100)         NOT NULL,
+    Cidade VARCHAR(50)          NOT NULL,
+    CodigoPostal VARCHAR(8)     NOT NULL,  
     Email VARCHAR(50)           NOT NULL, 
     Telemovel INT(9)            NOT NULL, 
     Telefone INT(9)             NOT NULL,
