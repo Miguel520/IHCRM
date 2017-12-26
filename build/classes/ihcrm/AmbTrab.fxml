@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="646.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <SplitPane dividerPositions="0.26594594594594595" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <TabPane prefHeight="369.0" prefWidth="90.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tabCliente" text="Cliente">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="listaClientes" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Equipa">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Detalhes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton layoutX="54.0" layoutY="90.0" mnemonicParsing="false" text="Feminino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="90.0" />
+                              <RadioButton layoutX="54.0" layoutY="55.0" mnemonicParsing="false" text="Masculino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="55.0" />
+                              <Label layoutX="14.0" layoutY="56.0" text="Sexo:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="624.0" AnchorPane.topAnchor="56.0" />
+                              <TextArea layoutX="345.0" layoutY="55.0" prefHeight="311.0" prefWidth="315.0" AnchorPane.bottomAnchor="216.0" AnchorPane.leftAnchor="345.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="55.0" />
+                              <Label layoutX="275.0" layoutY="56.0" text="Detalhes:" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="337.0" AnchorPane.topAnchor="56.0" />
+                              <DatePicker layoutX="14.0" layoutY="145.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="145.0" />
+                              <Label layoutX="14.0" layoutY="130.0" text="Data de Adesao:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="130.0" />
+                              <TextField layoutX="129.0" layoutY="9.0" prefHeight="25.0" prefWidth="541.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="5.0" />
+                              <Label layoutX="14.0" layoutY="14.0" text="Nome do cliente:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                              <Label layoutX="14.0" layoutY="200.0" text="Data de Nascimento:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="200.0" />
+                              <DatePicker layoutX="14.0" layoutY="215.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="215.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Interaçoes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                  <Tab text="Compras">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="0.0" prefWidth="597.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Novo" />
+                  <MenuItem mnemonicParsing="false" text="Refresh" />
+                  <MenuItem mnemonicParsing="false" text="Fechar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Apagar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
