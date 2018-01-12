@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="646.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.AmbTrabController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="646.0" minWidth="1000.0" prefHeight="646.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.AmbTrabController">
    <center>
-      <SplitPane dividerPositions="0.26594594594594595" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.26594594594594595" BorderPane.alignment="CENTER">
         <items>
             <TabPane prefHeight="369.0" prefWidth="90.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
@@ -24,30 +24,34 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ListView layoutX="-1.0" layoutY="1.0" prefHeight="578.0" prefWidth="246.0" />
+                              <ListView layoutX="-1.0" layoutY="1.0" prefHeight="578.0" prefWidth="246.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children></AnchorPane>
                   </content>
                 </Tab>
               </tabs>
             </TabPane>
-            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab text="Detalhes">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <RadioButton layoutX="54.0" layoutY="90.0" mnemonicParsing="false" text="Feminino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="90.0" />
-                              <RadioButton layoutX="54.0" layoutY="55.0" mnemonicParsing="false" text="Masculino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="55.0" />
+                              <RadioButton fx:id="rbFeminino" layoutX="54.0" layoutY="90.0" mnemonicParsing="false" text="Feminino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="90.0" />
+                              <RadioButton fx:id="rbMasculino" layoutX="54.0" layoutY="55.0" mnemonicParsing="false" text="Masculino" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="55.0" />
                               <Label layoutX="14.0" layoutY="56.0" text="Sexo:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="624.0" AnchorPane.topAnchor="56.0" />
                               <TextArea layoutX="345.0" layoutY="55.0" prefHeight="311.0" prefWidth="315.0" AnchorPane.bottomAnchor="216.0" AnchorPane.leftAnchor="345.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="55.0" />
                               <Label layoutX="250.0" layoutY="56.0" text="Detalhes:" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="362.0" AnchorPane.topAnchor="56.0" />
-                              <DatePicker layoutX="14.0" layoutY="145.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="145.0" />
+                              <DatePicker fx:id="dataAdesao" layoutX="14.0" layoutY="145.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="145.0" />
                               <Label layoutX="14.0" layoutY="130.0" text="Data de Adesao:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="130.0" />
                               <TextField fx:id="txtPrNome" layoutX="129.0" layoutY="9.0" prefHeight="25.0" prefWidth="541.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="5.0" />
                               <Label layoutX="14.0" layoutY="14.0" text="Nome do cliente:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
                               <Label layoutX="14.0" layoutY="200.0" text="Data de Nascimento:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="200.0" />
-                              <DatePicker layoutX="14.0" layoutY="215.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="215.0" />
-                              <Button fx:id="btnEditar" layoutX="579.0" layoutY="497.0" mnemonicParsing="false" onAction="#editarCliente" text="Editar" />
+                              <DatePicker fx:id="dataNascimento" layoutX="14.0" layoutY="215.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="215.0" />
+                              <Button fx:id="btnEditar" layoutX="579.0" layoutY="497.0" mnemonicParsing="false" onAction="#editarCliente" text="Abrir" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="39.0" />
+                              <Label layoutX="14.0" layoutY="276.0" text="Número Contribuinte:" AnchorPane.leftAnchor="14.0" />
+                              <TextField fx:id="txtNumeroContribuinte" layoutX="166.0" layoutY="271.0" prefHeight="25.0" prefWidth="173.0" AnchorPane.leftAnchor="166.0" />
+                              <TextField fx:id="txtNumeroTelemovel" layoutX="166.0" layoutY="303.0" prefHeight="25.0" prefWidth="173.0" AnchorPane.leftAnchor="166.0" />
+                              <Label layoutX="14.0" layoutY="308.0" text="Número Telemóvel:" AnchorPane.leftAnchor="14.0" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -56,7 +60,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView layoutX="8.0" layoutY="65.0" prefHeight="437.0" prefWidth="655.0">
+                              <TableView layoutX="8.0" layoutY="65.0" prefHeight="437.0" prefWidth="655.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="65.0">
                                 <columns>
                                   <TableColumn prefWidth="72.0" text="ID" />
                                   <TableColumn prefWidth="85.0" text="Meio" />
@@ -68,10 +72,10 @@
                                     <TableColumn prefWidth="83.0" text="ID_Produto" />
                                 </columns>
                               </TableView>
-                              <TextField layoutX="198.0" layoutY="25.0" prefHeight="27.0" prefWidth="388.0" />
-                              <Button layoutX="595.0" layoutY="25.0" mnemonicParsing="false" text="Procurar" />
-                              <ComboBox layoutX="10.0" layoutY="25.0" prefHeight="26.0" prefWidth="164.0" promptText="Pesquisar por:" />
-                              <Button layoutX="295.0" layoutY="525.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Limpar" />
+                              <TextField layoutX="178.0" layoutY="26.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="109.0" AnchorPane.topAnchor="29.0" />
+                              <Button layoutX="589.0" layoutY="26.0" mnemonicParsing="false" text="Procurar" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="29.0" />
+                              <ComboBox layoutX="10.0" layoutY="25.0" promptText="Pesquisar por:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="28.0" />
+                              <Button layoutX="295.0" layoutY="525.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Limpar" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="270.0" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -80,9 +84,9 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextField layoutX="190.0" layoutY="27.0" prefHeight="25.0" prefWidth="392.0" />
-                              <Button fx:id="pesquisar_compras" layoutX="590.0" layoutY="26.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="72.0" text="Procurar" />
-                              <TableView layoutX="8.0" layoutY="67.0" prefHeight="441.0" prefWidth="655.0">
+                              <TextField layoutX="166.0" layoutY="29.0" prefHeight="25.0" prefWidth="392.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="109.0" AnchorPane.topAnchor="29.0" />
+                              <Button fx:id="pesquisar_compras" layoutX="587.0" layoutY="29.0" mnemonicParsing="false" text="Procurar" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="29.0" />
+                              <TableView layoutX="8.0" layoutY="67.0" prefHeight="441.0" prefWidth="655.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="65.0">
                                 <columns>
                                   <TableColumn prefWidth="75.0" text="ID_Compra" />
                                   <TableColumn prefWidth="87.0" text="Quantidade" />
@@ -93,8 +97,8 @@
                                     <TableColumn prefWidth="128.0" text="ID_Cliente" />
                                 </columns>
                               </TableView>
-                              <Button layoutX="287.0" layoutY="528.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Limpar" />
-                              <ComboBox layoutX="17.0" layoutY="27.0" prefHeight="26.0" prefWidth="147.0" promptText="Pesquisar por:" />
+                              <Button layoutX="287.0" layoutY="528.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Limpar" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="270.0" />
+                              <ComboBox layoutX="8.0" layoutY="28.0" promptText="Pesquisar por:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="28.0" />
                            </children></AnchorPane>
                      </content>
                   </Tab>

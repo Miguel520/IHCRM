@@ -1,7 +1,7 @@
 USE mfMain;
 
-INSERT INTO cliente (IDCliente, NumeroContribuinte, PrNome, UltNome, DataAdr, NumCompras, DataUltimaCompra) 
-VALUES ('1', '763546789', 'Miguel', 'Sousa', '2017-01-02', '2', '2017-12-26');
+INSERT INTO cliente (IDCliente, DataNascimento, Sexo, NumeroContribuinte, PrNome, UltNome, DataAdr, NumCompras, DataUltimaCompra) 
+VALUES ('1', '1997-05-02', 'M', '763546789', 'Miguel', 'Sousa', '2017-01-02', '2', '2017-12-26'), ('2', '1992-10-16', 'M', '763546789', 'Bruno', 'Sousa', '2017-01-02', '2', '2017-12-26'), ('3', '1997-05-02', 'M', '763546789', 'Francisco', 'Sousa', '2017-01-02', '2', '2017-12-26'), ('4', '1993-06-03', 'M', '763546789', 'Miguel', 'Nunes', '2017-01-02', '2', '2017-12-26'), ('5', '1995-09-23', 'M', '763546789', 'Nunes', 'Sousa', '2017-01-02', '2', '2017-12-26'), ('6', '1995-09-23', 'F', '763546789', 'Joana', 'Pires', '2017-01-02', '2', '2017-12-26');
 
 INSERT INTO contactoCliente (IDCliente, Morada, Cidade, CodigoPostal, Email, Telemovel, Telefone) 
 VALUES ('1', 'Rua de Teste nº13', 'Lisboa', '1234-567', 'miguel.sousa@teste.com', '962435235', '213213213');

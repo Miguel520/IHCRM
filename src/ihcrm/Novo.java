@@ -12,6 +12,10 @@ package ihcrm;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,6 +28,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -31,8 +36,20 @@ import javafx.stage.Stage;
 public class Novo implements Initializable {
     
     @FXML
-    private Label label;
-    private TextField txtUser;
+    private TextField txtPrNome;
+    @FXML
+    private TextField txtUltNome;
+    @FXML
+    private TextField txtNrContribuinte;
+    @FXML
+    private RadioButton rbMasculino;
+    @FXML
+    private RadioButton rbFeminino;
+    
+    
+    ResultSet rs = null;
+    Connection con = null;
+    Statement smt = null;
     
    
     public void start(Stage stage) throws Exception {
@@ -51,40 +68,26 @@ public class Novo implements Initializable {
     }
 
     @FXML
-    private void handleButtonAction(ActionEvent event) throws IOException {
-        showAmbTrab(event);
+    private void btnSalvar(ActionEvent event) throws IOException, SQLException {
+        salvar(event);
     }
     
  
-    public void showAmbTrab(ActionEvent event) throws IOException {
-        //Define String user
-        //String user = (String) txtUser.getText();
-        //String bemVindo = "Bem-vindo: " + user;
+    public void salvar(ActionEvent event) throws IOException, SQLException {
+        con = Conexao.getCon();
         
-        //Esta função serve para abrir novas janelas em que cria uma stage e uma scene   
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("AmbTrab.fxml"));
-            /* 
-            * if "fx:controller" is not set in fxml
-            * fxmlLoader.setController(NewWindowController);
-            */
-            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = new Stage();
-            stage.setTitle("Bem-vindo ao IHCRM");
-            stage.setScene(scene);
-            stage.setMinHeight(646);
-            stage.setMinWidth(1000);
-            stage.setMaximized(false);
-            stage.setResizable(false);
-            stage.show();
-            
-            //Esconder janela anterior
-            ((Node)(event.getSource())).getScene().getWindow().hide();
-        } catch (IOException e) {
-            Logger logger = Logger.getLogger(getClass().getName());
-            logger.log(Level.SEVERE, "Failed to create new Window.", e);
-        }
+        smt = con.createStatement();
+        
+        //String que = "INSERT INTO cliente (DataNascimento, Sexo, NumeroContribuinte, PrNome, UltNome, DataAdr, NumCompras, DataUltimaCompra) VALUES (" + cl'1997-05-02', 'M', '763546789', 'Miguel', 'Sousa', '2017-01-02', '2', '2017-12-26'),";
+           
+        //rs = smt.executeQuery(que);
+        
+        String prNome = txtPrNome.getText();
+        String ultNome = txtUltNome.getText();
+        
+        
+        ((Node)(event.getSource())).getScene().getWindow().hide();
+        
     }
 
     
