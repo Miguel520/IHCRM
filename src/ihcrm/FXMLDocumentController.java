@@ -20,7 +20,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -51,7 +53,7 @@ public class FXMLDocumentController implements Initializable {
             * if "fx:controller" is not set in fxml
             * fxmlLoader.setController(NewWindowController);
             */
-            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("Bem-vindo ao IHCRM");
             stage.setScene(scene);

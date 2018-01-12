@@ -5,6 +5,7 @@
  */
 package ihcrm;
 
+import java.sql.Statement;
 import java.util.Date;
 
 /**
@@ -12,20 +13,34 @@ import java.util.Date;
  * @author miguel
  */
 public class Cliente {
-    private String nomeCliente, notasCliente;
-    private Date dataNascimento, dataAdesao;
+    private String prNome, ultNome, notasCliente;
+    private Date dataNascimento, dataAdesao, dataUltimaCompra;
     private char sexo;
+    Statement st = null;
     
-    public Cliente(String nomeCliente, String notasCliente, Date dataNascimento, Date dataAdesao, char sexo){
-        this.nomeCliente = nomeCliente;
+    public Cliente(){
+        this.prNome = null;
+        this.ultNome = null;
+        this.notasCliente = null;
+        this.dataNascimento = null;
+        this.dataAdesao = null;
+    }
+    
+    public Cliente(String nomeCliente, String ultNome, String notasCliente, Date dataNascimento, Date dataAdesao, char sexo){
+        this.prNome = nomeCliente;
+        this.ultNome = ultNome;
         this.notasCliente = notasCliente;
         this.dataNascimento = dataNascimento;
         this.dataAdesao = dataAdesao;
         this.sexo = sexo;
     }
     
-    public String getNomeCliente(){
-        return nomeCliente;
+    public String getPrNome(){
+        return prNome;
+    }
+    
+    public String getUltNome(){
+        return ultNome;
     }
     
     public String getNotasCliente(){
@@ -44,8 +59,12 @@ public class Cliente {
         return sexo;
     }
     
-    public void setNomeCliente(String nomeCliente){
-        this.nomeCliente = nomeCliente;
+    public void setPrNome(String prNome){
+        this.prNome = prNome;
+    }
+    
+    public void setUltNome(String ultNome){
+        this.ultNome = ultNome;
     }
     
     public void setNotasCliente(String notasCliente){
@@ -54,6 +73,10 @@ public class Cliente {
     
     public void setDataNascimento(Date dataNascimento){
         this.dataNascimento = dataNascimento;
+    }
+    
+    public void setDataUltimaCompra(Date dataUltimaCompra){
+        this.dataUltimaCompra = dataUltimaCompra;
     }
     
     public void setDataAdesao(Date dataAdesao){
