@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="390.0" maxWidth="485.0" prefHeight="390.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.FXMLDocumentController">
+<AnchorPane id="AnchorPane" maxHeight="390.0" maxWidth="485.0" prefHeight="390.0" prefWidth="485.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="305.0" layoutY="254.0" onAction="#handleButtonAction" text="Entrar" />
       <TextField fx:id="txtUser" layoutX="193.0" layoutY="131.0" />
