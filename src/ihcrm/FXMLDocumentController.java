@@ -60,7 +60,7 @@ public class FXMLDocumentController implements Initializable {
             stage.setMinHeight(646);
             stage.setMinWidth(1000);
             stage.setMaximized(false);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
             
             //Esconder janela anterior

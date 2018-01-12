@@ -13,12 +13,15 @@ import java.util.Date;
  * @author miguel
  */
 public class Cliente {
-    private String prNome, ultNome, notasCliente;
+    private int ID, numeroContribuinte, numeroTelemovel;
+    private String prNome, ultNome, notasCliente, sexo;
     private Date dataNascimento, dataAdesao, dataUltimaCompra;
-    private char sexo;
     Statement st = null;
     
     public Cliente(){
+        this.ID = 0;
+        this.numeroContribuinte = 0;
+        this.numeroTelemovel = 0;
         this.prNome = null;
         this.ultNome = null;
         this.notasCliente = null;
@@ -26,13 +29,28 @@ public class Cliente {
         this.dataAdesao = null;
     }
     
-    public Cliente(String nomeCliente, String ultNome, String notasCliente, Date dataNascimento, Date dataAdesao, char sexo){
+    public Cliente(int ID, int numeroContribuinte, int numeroTelemovel, String nomeCliente, String ultNome, String notasCliente, Date dataNascimento, Date dataAdesao, String sexo){
+        this.ID = ID;
+        this.numeroTelemovel = numeroTelemovel;
+        this.numeroContribuinte = numeroContribuinte;
         this.prNome = nomeCliente;
         this.ultNome = ultNome;
         this.notasCliente = notasCliente;
         this.dataNascimento = dataNascimento;
         this.dataAdesao = dataAdesao;
         this.sexo = sexo;
+    }
+    
+    public int getID(){
+        return ID;
+    }
+    
+    public int getNumeroContribuinte(){
+        return numeroContribuinte;
+    }
+    
+    public int getNumeroTelemovel(){
+        return numeroTelemovel;
     }
     
     public String getPrNome(){
@@ -55,8 +73,20 @@ public class Cliente {
         return dataAdesao;
     }
     
-    public char getSexo(){
+    public String getSexo(){
         return sexo;
+    }
+    
+    public void setID(int ID){
+        this.ID = ID;
+    }
+    
+    public void setNumeroContribuinte(int numeroContribuinte){
+        this.numeroContribuinte = numeroContribuinte;
+    }
+    
+    public void setNumeroTelemovel(int numeroTelemovel){
+        this.numeroTelemovel = numeroTelemovel;
     }
     
     public void setPrNome(String prNome){
@@ -83,7 +113,12 @@ public class Cliente {
         this.dataAdesao = dataAdesao;
     }
     
-    public void setSexo(char sexo){
+    public void setSexo(String sexo){
         this.sexo = sexo;
+    }
+    
+    @Override
+    public String toString(){
+        return (this.prNome + " " + this.ultNome);
     }
 }

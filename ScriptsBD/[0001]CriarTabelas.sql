@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS cliente, contactoCliente, compras, produto, vendedor, conta
 CREATE TABLE cliente (
     IDCliente INT(11)           NOT NULL AUTO_INCREMENT,
     DataNascimento DATE			NOT NULL,
+    Sexo VARCHAR(1)				NOT NULL,
     NumeroContribuinte INT(9)   NOT NULL,
     PrNome VARCHAR(14)          NOT NULL, 
     UltNome VARCHAR(20)         NOT NULL,
