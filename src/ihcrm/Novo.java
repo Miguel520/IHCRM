@@ -5,11 +5,17 @@
  */
 package ihcrm;
 
+/**
+ *
+ * @author francisconunes
+ */
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,20 +23,35 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author miguel
- */
-public class AmbTrabController implements Initializable {
-
-    private void handleButtonAction(ActionEvent event) throws IOException {
+    
+public class Novo implements Initializable {
+    
+    @FXML
+    private Label label;
+    private TextField txtUser;
+    
+   
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Novo.fxml"));
+       
         
+        Scene scene = new Scene(root);
+        
+       
+        stage.setMaximized(false);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
+
+       
+    }
+
+    @FXML
+    private void handleButtonAction(ActionEvent event) throws IOException {
         showAmbTrab(event);
     }
     
@@ -43,17 +64,17 @@ public class AmbTrabController implements Initializable {
         //Esta função serve para abrir novas janelas em que cria uma stage e uma scene   
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("Novo.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("AmbTrab.fxml"));
             /* 
             * if "fx:controller" is not set in fxml
             * fxmlLoader.setController(NewWindowController);
             */
-            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = new Stage();
             stage.setTitle("Bem-vindo ao IHCRM");
             stage.setScene(scene);
-            stage.setMinHeight(100);
-            stage.setMinWidth(0);
+            stage.setMinHeight(646);
+            stage.setMinWidth(1000);
             stage.setMaximized(false);
             stage.setResizable(false);
             stage.show();
@@ -69,7 +90,8 @@ public class AmbTrabController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
 
+            
+    }    
+    
 }

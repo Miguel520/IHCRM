@@ -56,7 +56,9 @@ public class FXMLDocumentController implements Initializable {
             stage.setTitle("Bem-vindo ao IHCRM");
             stage.setScene(scene);
             stage.setMinHeight(646);
-            stage.setMinWidth(927);
+            stage.setMinWidth(1000);
+            stage.setMaximized(false);
+            stage.setResizable(false);
             stage.show();
             
             //Esconder janela anterior

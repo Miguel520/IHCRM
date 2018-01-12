@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="390.0" maxWidth="485.0" prefHeight="390.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.Novo">
+   <children>
+      <TabPane prefHeight="390.0" prefWidth="485.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dados Pessoais">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="59.0" prefHeight="32.0" prefWidth="116.0" text="Primeiro Nome:" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="39.0" layoutY="152.0" prefHeight="25.0" prefWidth="110.0" text="Nº Contribuinte:" AnchorPane.topAnchor="140.0" />
+                        <Label layoutX="39.0" layoutY="100.0" prefHeight="32.0" prefWidth="116.0" text="Último Nome:" AnchorPane.topAnchor="100.0" />
+                        <CheckBox layoutX="129.0" layoutY="219.0" mnemonicParsing="false" text="Masculino" />
+                        <CheckBox layoutX="290.0" layoutY="219.0" mnemonicParsing="false" text="Feminino" />
+                        <Button layoutX="370.0" layoutY="279.0" mnemonicParsing="false" text="Seguinte" AnchorPane.topAnchor="280.0" />
+                        <TextField layoutX="166.0" layoutY="61.0" AnchorPane.topAnchor="60.0" />
+                        <TextField layoutX="166.0" layoutY="102.0" AnchorPane.topAnchor="100.0" />
+                        <TextField layoutX="166.0" layoutY="139.0" AnchorPane.topAnchor="140.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Contactos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="166.0" prefWidth="259.0">
+                     <children>
+                        <Label layoutX="60.0" layoutY="75.0" text="Telemóvel:" />
+                        <Label layoutX="60.0" layoutY="124.0" text="Telefone:" />
+                        <Label layoutX="60.0" layoutY="177.0" text="Email:" />
+                        <TextField layoutX="139.0" layoutY="70.0" AnchorPane.topAnchor="70.0" />
+                        <TextField layoutX="139.0" layoutY="119.0" />
+                        <TextField layoutX="139.0" layoutY="172.0" />
+                        <Button layoutX="278.0" layoutY="275.0" mnemonicParsing="false" text="Anterior" AnchorPane.topAnchor="280.0" />
+                        <Button layoutX="364.0" layoutY="275.0" mnemonicParsing="false" text="Seguinte" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="280.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Localização">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="166.0" prefWidth="259.0">
+                     <children>
+                        <TextField layoutX="159.0" layoutY="69.0" />
+                        <TextField layoutX="159.0" layoutY="122.0" />
+                        <Label layoutX="65.0" layoutY="74.0" text="Morada:" />
+                        <Label layoutX="66.0" layoutY="127.0" text="Cidade:" />
+                        <Label layoutX="45.0" layoutY="186.0" text="Código Postal:" />
+                        <TextField layoutX="159.0" layoutY="181.0" />
+                        <Button layoutX="309.0" layoutY="277.0" mnemonicParsing="false" text="Atrás" AnchorPane.leftAnchor="309.0" AnchorPane.topAnchor="280.0" />
+                        <Button layoutX="392.0" layoutY="277.0" mnemonicParsing="false" onAction="#showAmbTrab" text="Confirmar" AnchorPane.topAnchor="280.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
