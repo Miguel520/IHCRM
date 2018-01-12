@@ -14,31 +14,22 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
-<<<<<<<
 import javafx.event.ActionEvent;
-=======
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
->>>>>>>
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-<<<<<<<
 import javafx.scene.control.Button;
-=======
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
->>>>>>>
 import javafx.scene.control.ListView;
-<<<<<<<
 import javafx.scene.control.TextField;
-=======
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
->>>>>>>
 
 /**
  * FXML Controller class
@@ -47,17 +38,14 @@ import javafx.stage.Stage;
  */
 public class AmbTrabController implements Initializable  {
 
-<<<<<<<
     @FXML
     private ListView listaClientes;
     private TextField txtPrNome;
     private Button btnEditar;
-=======
     private void handleButtonAction(ActionEvent event) throws IOException {
         
         showAmbTrab(event);
     }
->>>>>>>
     
  
     public void showAmbTrab(ActionEvent event) throws IOException {

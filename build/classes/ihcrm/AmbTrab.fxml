@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="646.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="646.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihcrm.AmbTrabController">
    <center>
       <SplitPane dividerPositions="0.26594594594594595" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
@@ -16,7 +16,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ListView layoutY="1.0" prefHeight="581.0" prefWidth="242.0" />
+                              <ListView fx:id="listaClientes" layoutY="1.0" prefHeight="581.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
                            </children></AnchorPane>
                   </content>
                 </Tab>
@@ -43,7 +43,7 @@
                               <Label layoutX="250.0" layoutY="56.0" text="Detalhes:" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="362.0" AnchorPane.topAnchor="56.0" />
                               <DatePicker layoutX="14.0" layoutY="145.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="145.0" />
                               <Label layoutX="14.0" layoutY="130.0" text="Data de Adesao:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="130.0" />
-                              <TextField layoutX="129.0" layoutY="9.0" prefHeight="25.0" prefWidth="541.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="5.0" />
+                              <TextField fx:id="txtPrNome" layoutX="129.0" layoutY="9.0" prefHeight="25.0" prefWidth="541.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="5.0" />
                               <Label layoutX="14.0" layoutY="14.0" text="Nome do cliente:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
                               <Label layoutX="14.0" layoutY="200.0" text="Data de Nascimento:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="200.0" />
                               <DatePicker layoutX="14.0" layoutY="215.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="215.0" />
@@ -85,12 +85,12 @@
                               <TableView layoutX="8.0" layoutY="67.0" prefHeight="441.0" prefWidth="655.0">
                                 <columns>
                                   <TableColumn prefWidth="75.0" text="ID_Compra" />
-                                  <TableColumn prefWidth="75.0" text="ID_Cliente" />
-                                    <TableColumn prefWidth="82.83059692382812" text="ID_Produto" />
-                                    <TableColumn prefWidth="98.94900512695312" text="ID_Vendedor" />
-                                    <TableColumn prefWidth="107.16943359375" text="Quantidade" />
-                                    <TableColumn prefWidth="92.83062744140625" text="Preço" />
-                                    <TableColumn prefWidth="128.0" text="Data Compra" />
+                                  <TableColumn prefWidth="87.0" text="Quantidade" />
+                                    <TableColumn prefWidth="71.0" text="Preço" />
+                                    <TableColumn prefWidth="98.94900512695312" text="ID_Produto" />
+                                    <TableColumn prefWidth="107.16943359375" text="Data Compra" />
+                                    <TableColumn prefWidth="92.83062744140625" text="ID_Vendedor" />
+                                    <TableColumn prefWidth="128.0" text="ID_Cliente" />
                                 </columns>
                               </TableView>
                               <Button layoutX="287.0" layoutY="528.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="110.0" text="Limpar" />
