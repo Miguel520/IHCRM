@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS mfMain;
 CREATE DATABASE IF NOT EXISTS mfMain;
 USE mfMain;
 
-DROP TABLE IF EXISTS cliente, contactoCliente, compras, produto, vendedor, contactoVendedor;
+DROP TABLE IF EXISTS cliente, contactoCliente, compras, produto, vendedor, contactoVendedor, interacoes;
 
 CREATE TABLE cliente (
     IDCliente INT(11)           NOT NULL AUTO_INCREMENT,
@@ -74,4 +74,19 @@ CREATE TABLE compras (
     FOREIGN KEY (IDProduto) REFERENCES produto (IDProduto),
     FOREIGN KEY (IDVendedor) REFERENCES vendedor (IDVendedor),
     PRIMARY KEY (IDCompra,IDCliente,IDProduto,IDVendedor)
+);
+
+CREATE TABLE interacoes (
+    IDInteracao INT(11)            NOT NULL AUTO_INCREMENT,
+    IDCliente INT(11)           NOT NULL, 
+    IDProduto INT(11)           NOT NULL,
+    IDVendedor INT(11)          NOT NULL,
+    Meio VARCHAR(50)           NOT NULL,
+    Estado VARCHAR(50)           NOT NULL,
+    DataInicio DATE             NOT NULL,
+    DataFim DATE             NOT NULL,
+    FOREIGN KEY (IDCliente)  REFERENCES cliente (IDCliente),
+    FOREIGN KEY (IDProduto) REFERENCES produto (IDProduto),
+    FOREIGN KEY (IDVendedor) REFERENCES vendedor (IDVendedor),
+    PRIMARY KEY (IDInteracao,IDCliente,IDProduto,IDVendedor)
 );

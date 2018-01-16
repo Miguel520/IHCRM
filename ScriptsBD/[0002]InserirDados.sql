@@ -17,3 +17,6 @@ VALUES ('1', 'Rua de Teste nº10', 'Lisboa', '1234-567', 'joao.alves@teste.com',
 
 INSERT INTO compras (IDCompra, IDCliente, IDProduto, IDVendedor, Quantidade, Preco, DataCompra)
 VALUES ('1', '1', '1', '1', '2', '23.00', '2017-12-26');
+
+INSERT INTO interacoes (IDInteracao, IDCliente, IDProduto, IDVendedor, Estado, Meio, DataInicio, DataFim)
+VALUES ('1', '1', '1', '1', 'concluido', 'email', '2017-12-26', '2018-01-10');
