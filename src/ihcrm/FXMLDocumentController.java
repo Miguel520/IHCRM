@@ -15,14 +15,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
@@ -57,7 +53,7 @@ public class FXMLDocumentController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Bem-vindo ao IHCRM");
             stage.setScene(scene);
-            stage.setMinHeight(646);
+            stage.setMinHeight(647);
             stage.setMinWidth(1000);
             stage.setMaximized(false);
             stage.setResizable(true);
