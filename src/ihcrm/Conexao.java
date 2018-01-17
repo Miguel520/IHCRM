@@ -13,10 +13,10 @@ import java.sql.SQLException;
 public class Conexao {
 
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String urlBD = "jdbc:mysql://localhost:3306/mfMain";
+    private static final String urlBD = "jdbc:mysql://localhost:3306/mfMain?";
     private static final String user = "root";
     private static final String pass = "teste123";
-    private static Connection conexao;
+    private static Connection conexao = null;
     
     
     public static Connection getCon(){
